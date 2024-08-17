@@ -213,3 +213,11 @@ function showAnswer() {
       ${incorrectAnswersHtml}
     `;
 }
+
+// Add event listeners for buttons
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
+
+
+displayQuestion();
