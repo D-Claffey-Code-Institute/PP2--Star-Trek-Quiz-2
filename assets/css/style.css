@@ -99,3 +99,11 @@ h1 {
 .hide {
     display: none;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 400px) {
+    body {
+        font-size: 75%;
+    }
+
+}
