@@ -73,3 +73,41 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+
+/* Function to displaythe current question */
+function displayQuestion() {
+    /* Gets the data for the current question */
+    const questionData = quizData[currentQuestion];
+
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = questionData.question;
+
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
+
+    /* Shuffles answers */
+    const shuffledOptions = [...questionData.options];
+    shuffleArray(shuffledOptions);
+
+    /* Loops through each shuffled option */
+    for (let i = 0; i < shuffledOptions.length; i++) {
+        const option = document.createElement('label');
+        option.className = 'option';
+        /* Creates radio button for answer */ 
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'quiz';
+        radio.value = shuffledOptions[i];
+
+        const optionText = document.createTextNode(shuffledOptions[i]);
+
+        option.appendChild(radio);
+        option.appendChild(optionText);
+        optionsElement.appendChild(option);
+    }
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
+}
