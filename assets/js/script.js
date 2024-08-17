@@ -1,7 +1,6 @@
 /* Questions and Answers*/
 
-const quizData = [
-    {
+const quizData = [{
         question: "Who was the captain in the first pilot episode of the original Star Trek Series?",
         options: ["James T. Kirk", "Jean-Luc Picard", "Christopher Pike", "Spock"],
         answer: "Christopher Pike",
@@ -52,3 +51,25 @@ const quizData = [
         answer: "Majel Barrett",
     },
 ];
+
+/* Constants declared for quiz */
+const quizContainer = document.getElementById('quiz');
+const resultContainer = document.getElementById('result');
+const submitButton = document.getElementById('submit');
+const retryButton = document.getElementById('retry');
+const showAnswerButton = document.getElementById('showAnswer');
+const mainHeader = document.getElementsByClassName('main');
+const username = document.getElementById('username');
+
+/* Variables for the quiz */
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+
+/* Function to shuffle questions for each attempt */
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
