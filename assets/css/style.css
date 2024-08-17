@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Wildcard selector styling */
+/* This section applies styles to all elements on the page */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
 
     font-family: "Raleway", sans-serif;
@@ -16,10 +18,11 @@ body {
     background-repeat: repeat;
     height: 100vh;
     width: 100%;
-  }
-  
-  .main {
-  
+}
+
+/* Main Content Container */
+.main {
+
     border: 5px solid whitesmoke;
     margin: auto;
     width: 50%;
@@ -27,12 +30,13 @@ body {
     text-align: center;
     color: whitesmoke;
     border-radius: 20px;
-  }
-  
-  .container {
-  
+}
+
+/* Container for Question and Options */
+.container {
+
     padding: 20px;
-  
+
     width: 50%;
     margin: auto;
     margin-top: 80px;
@@ -41,5 +45,57 @@ body {
     box-shadow: 0 2px 4px grey;
     border-radius: 20px;
     text-align: center;
-  
-  }
+}
+
+/* Styles for H1 Heading */
+h1 {
+    text-align: center;
+}
+
+/* Styles for Question Text */
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styles for Answer Options */
+.options {
+    margin-bottom: 20px;
+}
+
+/* Styles for Individual Option */
+.option {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styles for Button Element */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+/* Styles for Button Hover */
+.button:hover {
+    background-color: #3071a9;
+}
+
+/* Styles for Result Text */
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Hide Class for Hiding Elements */
+.hide {
+    display: none;
+}
