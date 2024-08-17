@@ -152,16 +152,16 @@ function displayResult() {
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
     // Display message based on the users score
-    if (score > 0 && score <= 2 ){
-      resultContainer.innerHTML = `Back to the Academy Cadet`;
-    } else if (score >=3 && score <= 5){
-      resultContainer.innerHTML = `Youve got some work to do Ensign`;
-    } else if (score >= 6 && score <= 8){
-      resultContainer.innerHTML = `Very Impressive Number 2`;
+    if (score > 0 && score <= 2) {
+        resultContainer.innerHTML = `Back to the Academy Cadet`;
+    } else if (score >= 3 && score <= 5) {
+        resultContainer.innerHTML = `Youve got some work to do Ensign`;
+    } else if (score >= 6 && score <= 8) {
+        resultContainer.innerHTML = `Very Impressive Number 2`;
     } else {
-      resultContainer.innerHTML = `Is that you Picard??`;
+        resultContainer.innerHTML = `Is that you Picard??`;
     };
-    
+
 }
 
 //Function to retry the quiz once completed
@@ -180,5 +180,36 @@ function retryQuiz() {
     resultContainer.innerHTML = '';
     // Displays he first question again
     displayQuestion();
-  }
+}
+
+// Function that shows the answers to the questions they got wrong
+function showAnswer() {
+    // Hide the quiz container and submit button
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+
+    // Show retry and hide show answer buttons
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'none';
+
+    // Write a string to display incorrect answers
+    let incorrectAnswersHtml = '';
+    for (let i = 0; i < incorrectAnswers.length; i++) {
+        incorrectAnswersHtml += `
+        <p>
+          <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+          <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+          <strong>Correct  
+   Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+        </p>  
   
+      `;
+    }
+
+    // Update the result container with score and incorrect answers
+    resultContainer.innerHTML = `
+      <p>You scored ${score} out of ${quizData.length}!</p>
+      <p>Incorrect Answers:</p>
+      ${incorrectAnswersHtml}
+    `;
+}
