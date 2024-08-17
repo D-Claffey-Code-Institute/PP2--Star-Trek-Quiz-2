@@ -75,7 +75,7 @@ function shuffleArray(array) {
 }
 
 
-/* Function to displaythe current question */
+/* Function to display the current question */
 function displayQuestion() {
     /* Gets the data for the current question */
     const questionData = quizData[currentQuestion];
@@ -95,7 +95,7 @@ function displayQuestion() {
     for (let i = 0; i < shuffledOptions.length; i++) {
         const option = document.createElement('label');
         option.className = 'option';
-        /* Creates radio button for answer */ 
+        /* Creates radio button for answer */
         const radio = document.createElement('input');
         radio.type = 'radio';
         radio.name = 'quiz';
@@ -110,4 +110,34 @@ function displayQuestion() {
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
+}
+
+//Function that checks the answers are correct and adds to the users score if true
+function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+
+    /* Checks if an option has been selected */
+    if (selectedOption) {
+        const answer = selectedOption.value;
+        /* Checks if the answer is correct */
+        if (answer === quizData[currentQuestion].answer) {
+            score++;
+            /* Stores wrong answers for dispaly later */
+        } else {
+            incorrectAnswers.push({
+                question: quizData[currentQuestion].question,
+                incorrectAnswer: answer,
+                correctAnswer: quizData[currentQuestion].answer,
+            });
+        }
+        /* Moves to next question */
+        currentQuestion++;
+        selectedOption.checked = false;
+        /* Checks if all questions have been answered */
+        if (currentQuestion < quizData.length) {
+            displayQuestion();
+        } else {
+            displayResult();
+        }
+    }
 }
