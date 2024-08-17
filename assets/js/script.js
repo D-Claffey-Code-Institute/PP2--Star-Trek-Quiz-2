@@ -141,3 +141,19 @@ function checkAnswer() {
         }
     }
 }
+
+/* Function to display the quiz result */
+function displayResult() {
+    /* Hides the quiz container and submit button */
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+  
+    /* Shows the retry and show answer buttons */
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'inline-block';
+  
+    /* Displays a message based on the score */
+    if (score > 0 && score <= 2) {
+      resultContainer.innerHTML = `Back to the Academy Cadet`;
+    } else if (score >= 3 && score <= 5) {
+      resultContainer.innerHTML = `You've got some work to do Ensign`;
