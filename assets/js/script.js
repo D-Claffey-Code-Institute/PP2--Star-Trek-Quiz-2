@@ -163,3 +163,22 @@ function displayResult() {
     };
     
 }
+
+//Function to retry the quiz once completed
+function retryQuiz() {
+    // Resets quiz variables
+    currentQuestion = 0;
+    score = 0;
+    incorrectAnswers = [];
+    // Shows quiz container and submit buttons
+    quizContainer.style.display = 'block';
+    submitButton.style.display = 'inline-block';
+    // Hides retry and show answers buttons
+    retryButton.style.display = 'none';
+    showAnswerButton.style.display = 'none';
+    // Clears result container
+    resultContainer.innerHTML = '';
+    // Displays he first question again
+    displayQuestion();
+  }
+  
