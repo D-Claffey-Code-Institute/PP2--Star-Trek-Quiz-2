@@ -1,4 +1,4 @@
-/* Questions and Answers*/
+// Questions and Answers*
 
 const quizData = [{
         question: "Who was the captain in the first pilot episode of the original Star Trek Series?",
@@ -52,7 +52,7 @@ const quizData = [{
     },
 ];
 
-/* Constants declared for quiz */
+// Constants declared for quiz 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');
@@ -61,12 +61,12 @@ const showAnswerButton = document.getElementById('showAnswer');
 const mainHeader = document.getElementsByClassName('main');
 const username = document.getElementById('username');
 
-/* Variables for the quiz */
+// Variables for the quiz 
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
 
-/* Function to shuffle questions for each attempt */
+// Function to shuffle questions for each attempt 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -75,9 +75,9 @@ function shuffleArray(array) {
 }
 
 
-/* Function to display the current question */
+// Function to display the current question 
 function displayQuestion() {
-    /* Gets the data for the current question */
+    // Gets the data for the current question 
     const questionData = quizData[currentQuestion];
 
     const questionElement = document.createElement('div');
@@ -87,15 +87,15 @@ function displayQuestion() {
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
 
-    /* Shuffles answers */
+    // Shuffles answers 
     const shuffledOptions = [...questionData.options];
     shuffleArray(shuffledOptions);
 
-    /* Loops through each shuffled option */
+    // Loops through each shuffled option 
     for (let i = 0; i < shuffledOptions.length; i++) {
         const option = document.createElement('label');
         option.className = 'option';
-        /* Creates radio button for answer */
+        // Creates radio button for answer 
         const radio = document.createElement('input');
         radio.type = 'radio';
         radio.name = 'quiz';
@@ -116,13 +116,13 @@ function displayQuestion() {
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
 
-    /* Checks if an option has been selected */
+    // Checks if an option has been selected 
     if (selectedOption) {
         const answer = selectedOption.value;
-        /* Checks if the answer is correct */
+        // Checks if the answer is correct 
         if (answer === quizData[currentQuestion].answer) {
             score++;
-            /* Stores wrong answers for dispaly later */
+            // Stores wrong answers for dispaly later 
         } else {
             incorrectAnswers.push({
                 question: quizData[currentQuestion].question,
@@ -130,10 +130,10 @@ function checkAnswer() {
                 correctAnswer: quizData[currentQuestion].answer,
             });
         }
-        /* Moves to next question */
+        // Moves to next question 
         currentQuestion++;
         selectedOption.checked = false;
-        /* Checks if all questions have been answered */
+        // Checks if all questions have been answered 
         if (currentQuestion < quizData.length) {
             displayQuestion();
         } else {
@@ -142,18 +142,24 @@ function checkAnswer() {
     }
 }
 
-/* Function to display the quiz result */
+/* Function that displays the results at the end of the quiz ad gives the user a messaage with
+Their score */
 function displayResult() {
-    /* Hides the quiz container and submit button */
+    // Hides the quiz container and submit button
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
-  
-    /* Shows the retry and show answer buttons */
+    // Show the retry and show answers button
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
-  
-    /* Displays a message based on the score */
-    if (score > 0 && score <= 2) {
+    // Display message based on the users score
+    if (score > 0 && score <= 2 ){
       resultContainer.innerHTML = `Back to the Academy Cadet`;
-    } else if (score >= 3 && score <= 5) {
-      resultContainer.innerHTML = `You've got some work to do Ensign`;
+    } else if (score >=3 && score <= 5){
+      resultContainer.innerHTML = `Youve got some work to do Ensign`;
+    } else if (score >= 6 && score <= 8){
+      resultContainer.innerHTML = `Very Impressive Number 2`;
+    } else {
+      resultContainer.innerHTML = `Is that you Picard??`;
+    };
+    
+}
