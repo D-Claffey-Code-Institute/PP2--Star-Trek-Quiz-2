@@ -59,8 +59,7 @@ const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
-const mainHeader = document.getElementsByClassName('main');
-const startButton = document.getElementById('startButton');
+
 
 
 // Variables for the quiz 

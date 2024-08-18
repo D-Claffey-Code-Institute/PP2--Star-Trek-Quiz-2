@@ -13,8 +13,11 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 ### Exsisting Features
 
 - _Landing Page_
-  - ![Landing Page](assets/images/landing_page.png)
   - This the page the user arrives at when entering the site, it shows the rules and the start of the quiz.
+  
+  ![Landing Page](assets/images/landing_page.png)
+    
+    
 
 - _Rules_ 
   - Informs the user how toprogress and what will happen when they have answered all the questions.
@@ -57,5 +60,6 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 - For HTML validation i used WSC Markup which came back with no errors:
   - ![html_validation](assets/images/html_validation.png)
 
-- For Javascript validation I used JSHint which came back with no errors:
-  - 
+- For Javascript validation I used JSHint which came back with no errors.
+
+
