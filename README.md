@@ -19,16 +19,16 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
     
     
 
-- _Rules_ 
+- Rules 
   - Informs the user how toprogress and what will happen when they have answered all the questions.
 
-- _Retry_
+- Retry
   - The user is given an option to retry the quiz once they have finished.
 
-- _Show Answers_
+- Show Answers
   - The user is given the option to see the answers to the questions they got wrong once they have finished the quiz.
 
-- _Shuffle Answers_
+- Shuffle Answers
   - Everytime the user starts the quiz the answers are shuffled so the user just doesn't remember the order.
 
 ### Future Features
@@ -37,6 +37,63 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 - A larger variety of questions.
 - Different questions depending on what series of Star Trek they select.
 - A difficulty system to make the quiz more or less challenging.
+
+
+## User Experience
+
+The quiz is of a simple design consisting of 10 questions. At the end of the quiz the user will get a rank depending on their score. They can then retry the quiz if they like. 
+
+### User Stories
+As a user:
+- I want the site to be simple and easy to navigate
+- I want to be able to test my knowledge of the Star Trek universe.
+- I want to be able to easily find the site in search engines.
+
+### As a Developer:
+As a developer:
+- I want the user to easily navigate the site.
+- I want the user to be challenged.
+- I want the user to try again to achieve a higher rank.
+
+### Color Scheme
+The site consists of a background showing a picture of space. So I used text and bordering with the colour "Whitesmoke".
+
+This was to have a clear contrast between the background and content, it also lets the content of the site take center stage.
+
+### Typography
+The font used is easy to read and clear against the dark background.
+
+For the font I used the Google font, Raleway.
+
+Here is the link https://fonts.google.com/specimen/Raleway
+
+### Wire frames
+
+Wire Frames are made using Balsamiq and shown here.
+
+![wireframe](assets/images/wireframe.png)
+
+
+## Technologies used
+
+### Languages
+
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+
+### Frameworks, Libraries and Programs
+
+#### Google Fonts
+- I imported Google fonts and placed it in the style tag in the HTML file.
+#### Favicon
+- For my Favicon, I used a Star Trek favicon from https://freefavicon.com/freefavicons/objects/iconinfo/star-trek-badge-152-203991.html
+#### Github
+- I used Github to store my project and to deploy it.
+#### Am I Responsive
+- I used the Am I responsive website to give a screenshot of how my site looks on various screen sizes. 
+#### Balsamiq
+- I used Balsamiq to create the wireframe for my project.
 
 ## Testing
 
@@ -103,5 +160,15 @@ Here are the following steps I used to deploy the website from Github repository
 7. Press Enter to create your local clone.
 
 
+### Content
+- The wireframe was created using [Balsamiq](https://balsamiq.com/)
 
+- The Questions for the game were taken from https://www.chipublib.org/blogs/post/quiz-how-well-do-you-know-star-trek/
 
+- Quiz tutorial code from https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide
+
+- Font from [Google Fonts](https://fonts.google.com/)
+
+- Favicon from [Free Favicon](https://freefavicon.com/freefavicons/objects/iconinfo/star-trek-badge-152-203991.html)
+
+- site to remove the background from the Star Treklogo was  [Remove.bg](https://remove.bg/)
