@@ -37,4 +37,25 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 
 ## Testing
 
+### Accessibility
 
+- To test accessibility i used Chromes lighthouse feature in the dev tools.
+
+  - Mobile:
+
+  <img src="assets/images/lighthouse_mobile.png" width = "380px" alt="lighthouse_mobile">
+
+  - Desktop:
+
+  <img src="assets/images/lighthouse_desktop.png" width = "380px" alt="lighthouse_desktop">
+
+### Code Validation
+
+- For CSS validation i used WSC Jigsaw which came back with no errors: 
+  - ![css_vaidation](assets/images/css_validation.png)
+
+- For HTML validation i used WSC Markup which came back with no errors:
+  - ![html_validation](assets/images/html_validation.png)
+
+- For Javascript validation I used JSHint which came back with no errors:
+  - 
