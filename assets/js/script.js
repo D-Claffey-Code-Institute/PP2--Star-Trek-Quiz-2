@@ -52,6 +52,7 @@ const quizData = [{
     },
 ];
 
+
 // Constants declared for quiz 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
@@ -59,7 +60,8 @@ const submitButton = document.getElementById('submit');
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 const mainHeader = document.getElementsByClassName('main');
-const username = document.getElementById('username');
+const startButton = document.getElementById('startButton');
+
 
 // Variables for the quiz 
 let currentQuestion = 0;
@@ -164,6 +166,7 @@ function displayResult() {
 
 }
 
+
 //Function to retry the quiz once completed
 function retryQuiz() {
     // Resets quiz variables
@@ -218,6 +221,7 @@ function showAnswer() {
 submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
+
 
 
 displayQuestion();
