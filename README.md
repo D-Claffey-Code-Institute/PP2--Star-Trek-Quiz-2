@@ -8,6 +8,17 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 
 ![Responsive Mockup](assets/images/am_i_responsive.png)
 
+## Table of Content
+
+#### [Features](#features)
+#### [User Experiance](#user-experience)
+#### [Technologies](#technologies-used)
+#### [Testing](#testing)
+#### [Deployment/Forking/Cloning](#deploymentforkingcloning)
+#### [Content](#content)
+___
+
+
 ## Features
 
 ### Exsisting Features
@@ -38,7 +49,7 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 - Different questions depending on what series of Star Trek they select.
 - A difficulty system to make the quiz more or less challenging.
 
-
+___
 ## User Experience
 
 The quiz is of a simple design consisting of 10 questions. At the end of the quiz the user will get a rank depending on their score. They can then retry the quiz if they like. 
@@ -73,7 +84,7 @@ Wire Frames are made using Balsamiq and shown here.
 
 ![wireframe](assets/images/wireframe.png)
 
-
+___
 ## Technologies used
 
 ### Languages
@@ -94,7 +105,7 @@ Wire Frames are made using Balsamiq and shown here.
 - I used the Am I responsive website to give a screenshot of how my site looks on various screen sizes. 
 #### Balsamiq
 - I used Balsamiq to create the wireframe for my project.
-
+___
 ## Testing
 
 ### Accessibility
@@ -119,7 +130,7 @@ Wire Frames are made using Balsamiq and shown here.
 
 - For Javascript validation I used JSHint which came back with no errors.
 
-
+___
 ## Deployment/Forking/Cloning
 
 ### Deployment
@@ -159,8 +170,8 @@ Here are the following steps I used to deploy the website from Github repository
 6. Type git clone, and then paste the URL you copied earlier. _git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY_
 7. Press Enter to create your local clone.
 
-
-### Content
+___
+## Content
 - The wireframe was created using [Balsamiq](https://balsamiq.com/)
 
 - The Questions for the game were taken from https://www.chipublib.org/blogs/post/quiz-how-well-do-you-know-star-trek/
