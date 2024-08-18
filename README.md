@@ -13,7 +13,7 @@ You can click [here](https://d-claffey-code-institute.github.io/PP2--Star-Trek-Q
 #### [Features](#features)
 #### [User Experiance](#user-experience)
 #### [Technologies](#technologies-used)
-#### [Testing](#testing)
+#### [Testing](#testing-1)
 #### [Deployment/Forking/Cloning](#deploymentforkingcloning)
 #### [Content](#content)
 ___
@@ -105,8 +105,19 @@ ___
 - I used the Am I responsive website to give a screenshot of how my site looks on various screen sizes. 
 #### Balsamiq
 - I used Balsamiq to create the wireframe for my project.
+
 ___
 ## Testing
+
+| Action | Expected Outcome | Result |
+|---|---|---|
+| Select an answer | Answers radio button is selected | Outcome as expected |
+| Click Submit button | Next question is presented | Outcome as expected |
+| Click Retry | Quiz restarts | Outcome as expected |
+| Click Check Answers | All incorrect answers are displayed | Outcome as expected |
+| Finish Quiz | Message is displayed evaluating the user | Outcome as expected |
+
+
 
 ### Accessibility
 
